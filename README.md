@@ -18,7 +18,7 @@ The list of available Jodd quickstart template projects:
 ### madvoc
 
 This is a quick start web application built using
-*Madvoc* web framework. *Madvoc* is MVC framework that
+**Madvoc** web framework. **Madvoc** is MVC framework that
 uses CoC and annotations in a pragmatic way to simplify
 web application development. It is easy to use,
 learning curve is small and it is easy to extend.
@@ -32,7 +32,7 @@ http://jodd.org/doc/madvoc/index.html
 
 More advanced example of web application built with many Jodd frameworks.
 MySql database required for this example (SQL script provided).
-Application reads users from database (using *DbOom*) and displays
-them on the page (using *Madvoc*), decorated by *Decora*.
-Services and actions are wired with *Petite*. This example also
-uses benefits of *Jodd Joy*!
+Application reads users from database (using **DbOom**) and displays
+them on the page (using **Madvoc**), decorated by **Decora**.
+Services and actions are wired with **Petite**. This example also
+uses benefits of **Jodd Joy**!
