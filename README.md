@@ -10,12 +10,12 @@ also don't forget to check `todo`
 markers for more hints.
 
 
-== Quickstarts
+## Quickstarts
 
 The list of available Jodd quickstart template projects:
 
 
-=== madvoc
+### madvoc
 
 This is a quick start web application built using
 Madvoc web framework. Madvoc is MVC framework that
