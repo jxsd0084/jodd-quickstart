@@ -1,0 +1,36 @@
+defaultTasks 'build'
+
+version = '1.0.0-SNAPSHOT'
+
+apply plugin: 'war'
+apply plugin: 'jetty'
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	lib = [
+		jodd:			fileTree(dir: 'lib/jodd', include: '*.jar'),
+		servlet:		'javax.servlet:servlet-api:2.5',
+		jsp:			'javax.servlet.jsp:jsp-api:2.0',
+		log:			[	'org.slf4j:slf4j-api:1.7.2',
+							'ch.qos.logback:logback-core:1.0.9',
+							'ch.qos.logback:logback-classic:1.0.9']
+	]
+}
+
+dependencies {
+	compile lib.jodd
+	compile lib.log
+
+	runtime lib.servlet
+	runtime lib.jsp
+}
+
+
+// --- wrapper ----------------------------------------------------------------
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '1.6'
+}
