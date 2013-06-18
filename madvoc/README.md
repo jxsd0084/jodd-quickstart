@@ -1,21 +1,26 @@
+
 Jodd Quickstart: Madvoc
 =======================
 
-Experience [Madvoc](http://jodd.org/doc/madvoc/index.html) web application!
+Experience [Madvoc](http://jodd.org/doc/madvoc/index.html) QuickStart web application!
 
-## Build
+## Build war
 
-Clone repo and invoke:
+Clone this github repo. Invoke:
 
+	gradlew clean
 	gradlew war
 
 This will build the whole project and prepare the war file.
 
 
-## Run
+## Run web app
 
 Run war with:
 
 	gradlew jettyRun
 
-Yeah!
+After few moments, you can browse example on: [http://localhost:8080/madvoc]().
+Press `Control+C` to quit web application.
+
+Enjoy!

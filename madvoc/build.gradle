@@ -24,8 +24,8 @@ dependencies {
 	compile lib.jodd
 	compile lib.log
 
-	runtime lib.servlet
-	runtime lib.jsp
+	providedRuntime lib.servlet
+	providedRuntime lib.jsp
 }
 
 
