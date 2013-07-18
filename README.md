@@ -1,18 +1,17 @@
 Jodd Quickstart
 ===============
 
-Jodd quickstart templates.
-
-Read more: http://jodd.org/doc/quickstart
+Jodd QuickStart templates.
 
 Download project, setup and run. Then examine the code;
-also don't forget to check `todo`
-markers for more hints.
+also don't forget to check `todo` markers for more hints.
+
+Read more: http://jodd.org/doc/quickstart
 
 
 ## Quickstarts
 
-The list of available Jodd quickstart template projects:
+The list of available Jodd QuickStart template projects:
 
 
 ### madvoc
@@ -26,7 +25,8 @@ There are no external (xml) configuration, actions
 are simple POJOs, it is compatible with any view
 technology, its pluggable and so on...
 
-http://jodd.org/doc/madvoc/index.html
+[madvoc/README]()
+
 
 ### webapp 1
 
@@ -36,3 +36,5 @@ Application reads users from database (using **DbOom**) and displays
 them on the page (using **Madvoc**), decorated by **Decora**.
 Services and actions are wired with **Petite**. This example also
 uses benefits of **Jodd Joy**!
+
+[webapp1/README]()

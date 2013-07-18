@@ -1,6 +1,6 @@
 
 # list of madvoc method action annotation
-madvocConfig.actionAnnotations=jodd.madvoc.meta.Action, jodd.joy.madvoc.meta.PostAction, jodd.joy.madvoc.meta.JsonAction
+madvocConfig.actionAnnotations=jodd.madvoc.meta.Action, jodd.joy.madvoc.meta.PostAction, jodd.joy.madvoc.meta.JSONAction
 
 # list of default interceptors
 # in production we can remove EchoIntercepter
