@@ -25,7 +25,7 @@ There are no external (xml) configuration, actions
 are simple POJOs, it is compatible with any view
 technology, its pluggable and so on...
 
-[madvoc README](madvoc/README)
+[madvoc README](madvoc/README.md)
 
 
 ### webapp 1
@@ -37,4 +37,4 @@ them on the page (using **Madvoc**), decorated by **Decora**.
 Services and actions are wired with **Petite**. This example also
 uses benefits of **Jodd Joy**!
 
-[webapp1 README](webapp1/README)
+[webapp1 README](webapp1/README.md)
