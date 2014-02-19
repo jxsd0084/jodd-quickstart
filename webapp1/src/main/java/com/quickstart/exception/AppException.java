@@ -2,6 +2,9 @@ package com.quickstart.exception;
 
 import jodd.exception.UncheckedException;
 
+/**
+ * Simple example of app-related unchecked exception.
+ */
 public class AppException extends UncheckedException {
 
 	public AppException(Throwable t) {

@@ -1,6 +1,9 @@
 package com.quickstart;
 
 import jodd.joy.core.DefaultAppCore;
+import jodd.log.Logger;
+import jodd.log.LoggerFactory;
+import jodd.log.impl.SimpleLoggerFactory;
 
 public class AppCore extends DefaultAppCore {
 
@@ -18,5 +21,13 @@ public class AppCore extends DefaultAppCore {
 		ref = this;
 	}
 
+	/**
+	 * Defines logger implementation.
+	 */
+	@Override
+	protected void initLogger() {
+		LoggerFactory.setLoggerFactory(new SimpleLoggerFactory(Logger.Level.DEBUG));
+		super.initLogger();
+	}
 
 }

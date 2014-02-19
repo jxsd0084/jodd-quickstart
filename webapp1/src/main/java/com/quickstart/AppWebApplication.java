@@ -2,8 +2,8 @@ package com.quickstart;
 
 import jodd.madvoc.petite.PetiteWebApplication;
 import jodd.madvoc.component.MadvocConfig;
+import jodd.madvoc.proxetta.ProxettaAwareActionsManager;
 import jodd.petite.PetiteContainer;
-import jodd.joy.madvoc.ProxettaAwareActionsManager;
 
 /**
  * Web application. Central point for web layer that starts

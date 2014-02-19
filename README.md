@@ -4,7 +4,7 @@ Jodd Quickstart
 Jodd QuickStart templates.
 
 Download project, setup and run. Then examine the code;
-also don't forget to check `todo` markers for more hints.
+check `todo` markers for more hints.
 
 Read more: http://jodd.org/doc/quickstart
 
@@ -30,7 +30,7 @@ technology, its pluggable and so on...
 
 ### webapp 1
 
-More advanced example of web application built with many Jodd frameworks.
+More advanced example of web application built with many **Jodd*** frameworks.
 MySql database required for this example (SQL script provided).
 Application reads users from database (using **DbOom**) and displays
 them on the page (using **Madvoc**), decorated by **Decora**.

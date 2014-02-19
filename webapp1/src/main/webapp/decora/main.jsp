@@ -1,6 +1,5 @@
 <%@ taglib prefix="joy" uri="/jodd-joy" %>
 <%@ taglib prefix="j" uri="/jodd" %>
-<%@ taglib prefix="joyfn" uri="/joddfn-joy" %>
 <!DOCTYPE html>
 <html>
 <head>

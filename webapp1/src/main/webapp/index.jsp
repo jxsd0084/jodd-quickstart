@@ -7,10 +7,10 @@
 <img src="jodd-badge.png" align="left"/>
 <h1>Hello Jodd!</h1>
 
-<h2>Jodders are:</h2>
+<h2>Jodders love the following books:</h2>
 <ul>
-<j:iter items="${users}" var="user">
-	<li>${user.id}) ${user.name}</li>
+<j:iter items="${books}" var="book">
+	<li>${book.id}) ${book.name} by ${book.author}</li>
 </j:iter>
 </ul>
 

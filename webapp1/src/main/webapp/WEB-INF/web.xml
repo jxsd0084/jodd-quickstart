@@ -8,10 +8,6 @@
 	<listener>
 		<listener-class>jodd.servlet.RequestContextListener</listener-class>
 	</listener>
-	<listener>
-		<listener-class>jodd.servlet.HttpSessionListenerBroadcaster</listener-class>
-	</listener>
-
 
 	<!-- decora -->
 	<filter>
@@ -50,8 +46,6 @@
 		<jsp-property-group>
 			<url-pattern>*.jsp</url-pattern>
 			<page-encoding>UTF-8</page-encoding>
-			<!--<include-prelude>/jspf/prelude.jspf</include-prelude>-->
-			<!--<include-coda>/jspf/coda.jspf</include-coda>-->
 			<trim-directive-whitespaces>true</trim-directive-whitespaces>
 		</jsp-property-group>
 	</jsp-config>

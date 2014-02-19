@@ -2,13 +2,12 @@ package com.quickstart.model;
 
 import jodd.db.oom.meta.DbColumn;
 import jodd.db.oom.meta.DbTable;
-import jodd.joy.db.Entity;
 
 /**
- * User model object.
+ * Book model object.
  */
 @DbTable
-public class User extends Entity {
+public class Book {
 
 	@DbColumn
 	private long id;
@@ -17,17 +16,9 @@ public class User extends Entity {
 	private String name;
 
 	@DbColumn
-	private String email;
+	private String author;
 
-	@Override
-	protected long getEntityId() {
-		return id;
-	}
-
-	@Override
-	protected void setEntityId(long id) {
-		this.id = id;
-	}
+	// ---------------------------------------------------------------- access
 
 	public long getId() {
 		return id;
@@ -45,11 +36,11 @@ public class User extends Entity {
 		this.name = name;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getAuthor() {
+		return author;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 }

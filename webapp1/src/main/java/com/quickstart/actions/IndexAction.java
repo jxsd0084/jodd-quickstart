@@ -1,8 +1,8 @@
 package com.quickstart.actions;
 
-import com.quickstart.model.User;
+import com.quickstart.model.Book;
+import com.quickstart.service.BookService;
 import com.quickstart.service.FooService;
-import com.quickstart.service.UserService;
 import jodd.joy.madvoc.action.AppAction;
 import jodd.jtx.meta.Transaction;
 import jodd.madvoc.meta.Action;
@@ -25,10 +25,10 @@ public class IndexAction extends AppAction {
 	FooService fooService;
 
 	@PetiteInject
-	UserService userService;
+	BookService bookService;
 
 	@Out
-	List<User> users;
+	List<Book> books;
 
 	/**
 	 * Mapped to /index.html page. Calls a service.
@@ -39,6 +39,7 @@ public class IndexAction extends AppAction {
 		System.out.println("IndexAction.view");
 		System.out.println(fooService.getFrameworkName());
 
-		users = userService.findAllUsers();
+		books = bookService.findAllUsers();
 	}
+
 }
