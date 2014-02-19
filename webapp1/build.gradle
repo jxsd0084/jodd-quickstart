@@ -14,7 +14,8 @@ ext {
 		jodd:			fileTree(dir: 'lib/jodd', include: '*.jar'),
 		servlet:		'javax.servlet:servlet-api:2.5',
 		jsp:			'javax.servlet.jsp:jsp-api:2.0',
-		mysql:			'mysql:mysql-connector-java:5.1.21'
+		mysql:			'mysql:mysql-connector-java:5.1.21',
+		pgsql:          'postgresql:postgresql:9.1-901.jdbc4'
 	]
 }
 
@@ -24,6 +25,7 @@ dependencies {
 	providedRuntime lib.servlet
 	providedRuntime lib.jsp
 	providedRuntime lib.mysql
+	providedRuntime lib.pgsql
 }
 
 

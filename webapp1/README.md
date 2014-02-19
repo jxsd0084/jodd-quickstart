@@ -21,18 +21,27 @@ This will build the whole project and prepare the war file.
 
 ## Create database
 
+### MySql
+
 One time only, you need to create MySql database: `jodd-quickstart`
 using script `etc/mysql.sql`. Change database JDBC parameters
 in `src/main/resources/app.props`.
 
 
+### Postgres
+
+For Postgres, you will also need to create database: `jodd-quickstart`
+using script `etc/pgsql.sql`. Uncomment and change Postgres JDBC parameters
+in `src/main/resources/app.props`.
+
+
 ## Run web app
 
-Run war with:
+Run application with:
 
 	gradlew jettyRun
 
-After few moments, you can see example on: [http://localhost:8080/webapp1]().
+After few moments, you can see example on: [http://localhost:8080/webapp1](http://localhost:8080/webapp1).
 Press `Control+C` to quit web application.
 
 Enjoy!
