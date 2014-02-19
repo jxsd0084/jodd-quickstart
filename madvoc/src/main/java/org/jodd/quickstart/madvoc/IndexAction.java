@@ -24,6 +24,6 @@ public class IndexAction {
 	@Action
 	public void view() {
 		System.out.println("IndexAction.view");
-		version = "3.4.x";
+		version = "3.5.x";
 	}
 }

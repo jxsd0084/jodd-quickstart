@@ -20,7 +20,7 @@ Run war with:
 
 	gradlew jettyRun
 
-After few moments, you can browse example on: [http://localhost:8080/madvoc]().
+After few moments, you can browse example on: [http://localhost:8080/madvoc](http://localhost:8080/madvoc).
 Press `Control+C` to quit web application.
 
 Enjoy!

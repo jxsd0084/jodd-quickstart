@@ -1,5 +1,8 @@
 package org.jodd.quickstart.madvoc;
 
+import jodd.log.Logger;
+import jodd.log.LoggerFactory;
+import jodd.log.impl.SimpleLoggerFactory;
 import jodd.madvoc.WebApplication;
 
 /**
@@ -11,6 +14,11 @@ import jodd.madvoc.WebApplication;
  * todo customize Madvoc for your needs
  */
 public class AppWebApplication extends WebApplication {
+
+	public AppWebApplication() {
+		super();
+		LoggerFactory.setLoggerFactory(new SimpleLoggerFactory(Logger.Level.DEBUG));
+	}
 
 	@Override
 	protected void initWebApplication() {
