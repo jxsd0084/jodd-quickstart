@@ -27,7 +27,13 @@ dbpool.validateConnection=true
 dbpool.validationQuery=select 1
 
 # db orm manager
+# change this if necessary
 dboom.tableNames.prefix=qs_
-dboom.tableNames.uppercase=false
-dboom.columnNames.uppercase=false
+dboom.tableNames.lowercase=true
+dboom.columnNames.lowercase=true
 dboom.schemaName=jodd
+
+# different column aliases types
+#dboom.defaultColumnAliasType=TABLE_NAME
+#dboom.defaultColumnAliasType=TABLE_REFERENCE
+#dboom.defaultColumnAliasType=COLUMN_CODE
