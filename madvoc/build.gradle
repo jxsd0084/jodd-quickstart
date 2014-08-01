@@ -20,7 +20,7 @@ ext {
 dependencies {
 	compile lib.jodd
 
-	providedRuntime lib.servlet
+	compile lib.servlet
 	providedRuntime lib.jsp
 }
 
