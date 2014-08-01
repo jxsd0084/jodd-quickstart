@@ -13,7 +13,8 @@
 <p>This is a <i>Quick Start</i> project for <b>Madvoc</b>: Jodd web framework.</p>
 
 <p>
-	<a href="about.jodd.html?version=${version}">About Jodd</a>
+	<a href="about.jodd.html?version=${version}">About Jodd</a> - simple action<br>
+	<a href="flow/index.html">Take a survey</a> - example of flows and some new Madvoc stuff<br>
 </p>
 
 </body>

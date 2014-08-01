@@ -4,6 +4,9 @@ import jodd.log.Logger;
 import jodd.log.LoggerFactory;
 import jodd.log.impl.SimpleLoggerFactory;
 import jodd.madvoc.WebApplication;
+import jodd.madvoc.component.MadvocConfig;
+
+import javax.servlet.ServletContext;
 
 /**
  * Custom web application. It is a good practice to
@@ -28,5 +31,14 @@ public class AppWebApplication extends WebApplication {
 		//ClassFinder.setSystemJars();
 
 		super.initWebApplication();
+	}
+
+	@Override
+	protected void init(MadvocConfig madvocConfig, ServletContext servletContext) {
+
+		// set the root package to be where the index action is
+		madvocConfig.getRootPackages().addRootPackageOf(IndexAction.class);
+
+		super.init(madvocConfig, servletContext);
 	}
 }
