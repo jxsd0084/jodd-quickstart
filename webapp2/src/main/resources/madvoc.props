@@ -1,0 +1,19 @@
+
+# list of madvoc method action annotation
+madvocConfig.actionAnnotations=jodd.madvoc.meta.Action, jodd.joy.madvoc.meta.PostAction
+
+# list of default interceptors
+# in production we can remove EchoIntercepter
+madvocConfig.defaultInterceptors=jodd.madvoc.interceptor.EchoInterceptor, jodd.joy.madvoc.interceptor.DefaultInterceptorStack
+
+# unlimited uploads size
+madvocConfig.fileUploadFactory.maxFileSize=-1
+
+# empty parameters will not be ignored (default)
+madvocConfig.requestScopeInjectorConfig.ignoreEmptyRequestParams=false
+
+# empty parameters will be threaded as nulls
+madvocConfig.requestScopeInjectorConfig.treatEmptyParamsAsNull=true
+
+#defines path macro separators
+madvocConfig.pathMacroSeparators=(,:,)
