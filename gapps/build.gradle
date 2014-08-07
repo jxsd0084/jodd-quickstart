@@ -1,0 +1,52 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.google.appengine:gradle-appengine-plugin:1.9.4'
+    }
+}
+
+apply plugin: 'war'
+apply plugin: 'appengine'
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    providedCompile     'javax.servlet:servlet-api:2.5'
+    appengineSdk        'com.google.appengine:appengine-api-1.0-sdk:1.9.8'
+    compile             fileTree(dir: 'lib/jodd', include: '*.jar')
+}
+
+
+appengine {
+    httpPort = 8085
+
+    appcfg {
+        email = 'igor@jodd.org'
+        passIn = true
+
+        logs {
+            severity = 1
+            outputFile = file('mylogs.txt')
+        }
+
+        app {
+            id = 'jodd-ngn'
+        }
+
+		update {
+			useJava7 = true
+		}
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.0'
+}
