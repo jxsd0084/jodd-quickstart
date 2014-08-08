@@ -12,10 +12,10 @@
 			<param-name>madvoc.webapp</param-name>
 			<param-value>org.jodd.quickstart.gapps.AppWebApplication</param-value>
 		</init-param>
-		<init-param>
+		<!--init-param>
 			<param-name>madvoc.configurator</param-name>
 			<param-value>org.jodd.quickstart.gapps.AppConfigurator</param-value>
-		</init-param>
+		</init-param-->
 	</filter>
 	<filter-mapping>
 		<filter-name>madvoc</filter-name>

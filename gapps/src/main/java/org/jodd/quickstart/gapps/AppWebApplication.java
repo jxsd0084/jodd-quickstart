@@ -5,6 +5,8 @@ import jodd.log.LoggerFactory;
 import jodd.log.impl.SimpleLoggerFactory;
 import jodd.madvoc.WebApplication;
 import jodd.madvoc.component.MadvocConfig;
+import jodd.madvoc.config.AutomagicMadvocConfigurator;
+import jodd.madvoc.config.MadvocConfigurator;
 
 import javax.servlet.ServletContext;
 
@@ -32,5 +34,21 @@ public class AppWebApplication extends WebApplication {
 		madvocConfig.getRootPackages().addRootPackageOf(IndexAction.class);
 
 		super.init(madvocConfig, servletContext);
+	}
+
+	/**
+	 * Narrows down the entries that are going to be scanned by Madvoc.
+	 */
+	@Override
+	public void configure(MadvocConfigurator configurator) {
+		AutomagicMadvocConfigurator defaultConfigurator =
+				(AutomagicMadvocConfigurator) configurator;
+
+		String name = this.getClass().getPackage().getName();
+
+		// just scan Jodd classes and classes that belongs to this application
+		defaultConfigurator.setIncludedEntries("jodd.*", name + ".*");
+
+		super.configure(configurator);
 	}
 }
