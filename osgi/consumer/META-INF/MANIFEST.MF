@@ -1,0 +1,13 @@
+Manifest-Version: 1.0.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Hello World Consumer
+Bundle-SymbolicName: Hello World Consumer
+Bundle-Version: 1.0.0
+Import-Package: org.osgi.framework,
+ org.jodd.osgi.provider,
+ jodd.introspector,
+ jodd.bean,
+ jodd.upload,
+ jodd.typeconverter,
+ jodd
+Bundle-Activator: org.jodd.osgi.consumer.Activator
