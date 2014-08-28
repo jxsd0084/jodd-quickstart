@@ -58,3 +58,10 @@ using _routes_ file and not automatically. **Petite** beans, however
 are still loaded by scanning the class path.
 
 [webapp2 README](webapp2/README.md)
+
+
+### OSGi
+
+Simple example of using *Jodd* bundles inside OSGi environment.
+
+[osgi README](osgi/README.md)
