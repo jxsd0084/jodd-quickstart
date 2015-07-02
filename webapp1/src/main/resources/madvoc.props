@@ -8,9 +8,3 @@ madvocConfig.defaultInterceptors=jodd.madvoc.interceptor.EchoInterceptor, jodd.j
 
 # unlimited uploads size
 madvocConfig.fileUploadFactory.maxFileSize=-1
-
-# empty parameters will not be ignored (default)
-madvocConfig.requestScopeInjectorConfig.ignoreEmptyRequestParams=false
-
-# empty parameters will be threaded as nulls
-madvocConfig.requestScopeInjectorConfig.treatEmptyParamsAsNull=true

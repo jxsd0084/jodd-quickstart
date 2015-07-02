@@ -1,6 +1,7 @@
-
 Jodd Quickstart: Webapp 1
 =========================
+
+**[v3.6.6]**
 
 Experience several micro frameworks, such as:
 [Madvoc](http://jodd.org/doc/madvoc/index.html),

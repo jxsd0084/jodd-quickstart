@@ -37,3 +37,10 @@ dboom.schemaName=jodd
 #dboom.defaultColumnAliasType=TABLE_NAME
 #dboom.defaultColumnAliasType=TABLE_REFERENCE
 #dboom.defaultColumnAliasType=COLUMN_CODE
+
+
+# Configure RequestScopeInjector
+# empty parameters will not be ignored (default)
+requestScopeInjector.ignoreEmptyRequestParams=false
+# empty parameters will be threaded as nulls
+requestScopeInjector.treatEmptyParamsAsNull=true
