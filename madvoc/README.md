@@ -1,6 +1,7 @@
-
 Jodd Quickstart: Madvoc
 =======================
+
+**[v3.6.6]**
 
 Experience [Madvoc](http://jodd.org/doc/madvoc/index.html) QuickStart web application!
 
