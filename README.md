@@ -65,3 +65,8 @@ are still loaded by scanning the class path.
 Simple example of using *Jodd* bundles inside OSGi environment.
 
 [osgi README](osgi/README.md)
+
+
+### HTTP Client
+
+Simple example of *Jodd* http client.

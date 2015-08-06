@@ -1,0 +1,21 @@
+defaultTasks 'build'
+
+version = '1.0.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+	jcenter()
+	mavenCentral()
+}
+
+dependencies {
+	compile 'org.jodd:jodd-http:3.6.6'
+}
+
+
+// --- wrapper ----------------------------------------------------------------
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.5'
+}
