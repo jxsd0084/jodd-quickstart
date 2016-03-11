@@ -1,0 +1,35 @@
+defaultTasks 'build'
+
+version = '1.0.0-SNAPSHOT'
+
+apply plugin: 'war'
+
+repositories {
+	mavenCentral()
+}
+
+ext {
+	lib = [
+		jodd:			[
+							'org.jodd:jodd-madvoc:3.6.6',
+							'org.jodd:jodd-lagarto-web:3.6.6',
+							'org.jodd:jodd-proxetta:3.6.6',
+						],
+		servlet:		'javax.servlet:javax.servlet-api:3.1.0',
+		jsp:			'javax.servlet.jsp:jsp-api:2.2'
+	]
+}
+
+dependencies {
+	compile lib.jodd
+
+	providedRuntime lib.servlet
+	providedRuntime lib.jsp
+}
+
+
+// --- wrapper ----------------------------------------------------------------
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.4'
+}

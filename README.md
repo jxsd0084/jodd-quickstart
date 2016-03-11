@@ -27,6 +27,12 @@ technology, its pluggable and so on...
 
 [madvoc README](madvoc/README.md)
 
+### madvoc 2
+
+This is simple example of creating **Madvoc** using new declarative ways
+from Servlets 3.x and not using `web.xml`.
+
+[madvoc README](madvoc2/README.md)
 
 ### gapps
 

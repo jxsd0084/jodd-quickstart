@@ -1,0 +1,7 @@
+#
+# Madvoc configuration file
+# most of the settings can be set from here
+# (besides the primary settings in Java).
+#
+# todo this is a good place for settings that will change in production
+#
