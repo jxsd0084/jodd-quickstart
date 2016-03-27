@@ -26,4 +26,9 @@ public class IndexAction {
 		System.out.println("IndexAction.view");
 		version = "3.5.x";
 	}
+
+	@Action
+	public String text() {
+		return "text:你好";
+	}
 }

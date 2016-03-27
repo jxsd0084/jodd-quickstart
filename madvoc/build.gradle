@@ -12,9 +12,9 @@ repositories {
 ext {
 	lib = [
 		jodd:			[
-							'org.jodd:jodd-madvoc:3.6.6',
-							'org.jodd:jodd-lagarto-web:3.6.6',
-							'org.jodd:jodd-proxetta:3.6.6',
+							'org.jodd:jodd-madvoc:3.7',
+							'org.jodd:jodd-lagarto:3.7',
+							'org.jodd:jodd-proxetta:3.7',
 						],
 		servlet:		'javax.servlet:servlet-api:2.5',
 		jsp:			'javax.servlet.jsp:jsp-api:2.0'

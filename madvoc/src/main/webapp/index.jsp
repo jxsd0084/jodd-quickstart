@@ -15,6 +15,7 @@
 <p>
 	<a href="about.jodd.html?version=${version}">About Jodd</a> - simple action<br>
 	<a href="flow/index.html">Take a survey</a> - example of flows and some new Madvoc stuff<br>
+	<a href="index.text.html">Just a raw text</a><br>
 </p>
 
 </body>
