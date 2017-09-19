@@ -6,7 +6,7 @@ Jodd QuickStart templates.
 Download project, setup and run. Then examine the code;
 check `todo` markers for more hints.
 
-Read more: http://jodd.org/doc/quickstart
+Read more: https://jodd.org/quickstart/
 
 
 ## Quickstarts
