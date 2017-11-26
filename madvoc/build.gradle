@@ -1,36 +1,28 @@
 defaultTasks 'build'
 
-version = '1.0.0-SNAPSHOT'
+version = '1.0.0'
 
 apply plugin: 'war'
-apply plugin: 'jetty'
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
 
 repositories {
+	mavenLocal()
 	mavenCentral()
 }
 
 ext {
 	lib = [
 		jodd:			[
-							'org.jodd:jodd-madvoc:3.7',
-							'org.jodd:jodd-lagarto:3.7',
-							'org.jodd:jodd-proxetta:3.7',
+							"org.jodd:jodd-madvoc:${jodd_version}"
 						],
-		servlet:		'javax.servlet:servlet-api:2.5',
-		jsp:			'javax.servlet.jsp:jsp-api:2.0'
+		servlet:		'javax.servlet:javax.servlet-api:4.0.0',
+		jsp:			'javax.servlet.jsp:javax.servlet.jsp-api:2.3.1'
 	]
 }
 
 dependencies {
 	compile lib.jodd
 
-	compile lib.servlet
+	providedRuntime lib.servlet
 	providedRuntime lib.jsp
-}
-
-
-// --- wrapper ----------------------------------------------------------------
-
-task wrapper(type: Wrapper) {
-	gradleVersion = '2.4'
 }
