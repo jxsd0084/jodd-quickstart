@@ -1,5 +1,6 @@
 package org.jodd.quickstart.madvoc;
 
+import jodd.madvoc.MadvocContextListener;
 import jodd.madvoc.MadvocServletFilter;
 
 import javax.servlet.DispatcherType;
@@ -16,16 +17,17 @@ public class MadvocInitializer implements ServletContainerInitializer {
 	public void onStartup(Set<Class<?>> c, ServletContext sc) throws ServletException {
 		System.out.println("+++ Hello Servlets 3.0");
 
+		sc.addListener(MadvocContextListener.class);
+
+		sc.setInitParameter("madvoc.webapp", AppWebApplication.class.getName());
+
 		FilterRegistration filter = sc.addFilter("madvoc", MadvocServletFilter.class);
 
-		filter.setInitParameter("madvoc.webapp", "org.jodd.quickstart.madvoc.AppWebApplication");
+		filter.addMappingForUrlPatterns(
+			EnumSet.of(DispatcherType.FORWARD, DispatcherType.INCLUDE, DispatcherType.REQUEST),
+			true, "/*");
 
-		EnumSet NON_ASYNC_DISPATCHER_TYPES =
-			EnumSet.of(DispatcherType.FORWARD, DispatcherType.INCLUDE, DispatcherType.REQUEST);
-
-		filter.addMappingForUrlPatterns(NON_ASYNC_DISPATCHER_TYPES, true, "/*");
-
-		System.out.println("+++ MADVOC FILTER");
+		System.out.println("+++ Done.");
 	}
 }
 

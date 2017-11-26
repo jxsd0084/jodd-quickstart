@@ -1,12 +1,8 @@
 package org.jodd.quickstart.madvoc;
 
-import jodd.log.Logger;
 import jodd.log.LoggerFactory;
-import jodd.log.impl.SimpleLoggerFactory;
-import jodd.madvoc.WebApplication;
-import jodd.madvoc.component.MadvocConfig;
-
-import javax.servlet.ServletContext;
+import jodd.log.impl.SimpleLogger;
+import jodd.madvoc.WebApp;
 
 /**
  * Custom web application. It is a good practice to
@@ -16,29 +12,16 @@ import javax.servlet.ServletContext;
  *
  * todo customize Madvoc for your needs
  */
-public class AppWebApplication extends WebApplication {
+public class AppWebApplication extends WebApp {
 
 	public AppWebApplication() {
 		super();
-		LoggerFactory.setLoggerFactory(new SimpleLoggerFactory(Logger.Level.DEBUG));
+		LoggerFactory.setLoggerProvider(SimpleLogger.PROVIDER);
 	}
 
 	@Override
-	protected void initWebApplication() {
-		System.out.println("Welcome to Madvoc!");
-
-		// todo customize madvoc scanning path, e.g.:
-		//ClassFinder.setSystemJars();
-
-		super.initWebApplication();
-	}
-
-	@Override
-	protected void init(MadvocConfig madvocConfig, ServletContext servletContext) {
-
+	protected void initalized() {
 		// set the root package to be where the index action is
 		madvocConfig.getRootPackages().addRootPackageOf(IndexAction.class);
-
-		super.init(madvocConfig, servletContext);
 	}
 }
