@@ -1,0 +1,12 @@
+
+allprojects {
+    ext {
+		jodd_version = '4.0-20171123'
+	}
+}
+
+// --- wrapper ----------------------------------------------------------------
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '4.3.1'
+}

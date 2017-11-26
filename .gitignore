@@ -1,3 +1,7 @@
-/.idea/
-/*.iml
-/out/
+.gradle
+.idea
+*.iml
+felix-cache
+out
+classes
+build

@@ -1,38 +1,27 @@
-Jodd Quickstart
-===============
+# Jodd Quickstart
 
-Jodd QuickStart templates.
+Jodd examples, ready to be re-used!
 
-Download project, setup and run. Then examine the code;
+Download the project, setup and run. Then examine the code;
 check `todo` markers for more hints.
 
 Read more: https://jodd.org/quickstart/
 
+## madvoc
 
-## Quickstarts
+Web application built using only [Madvoc](http://jodd.org/madvoc) web framework and default configuration settings. Actions are annotated.
 
-The list of available Jodd QuickStart template projects:
+Run [the web app](http://localhost:8080/madvoc) with:
 
+	./gradlew :madvoc:jettyRun
 
-### madvoc
+## madvoc2
 
-This is a quick start web application built using
-**Madvoc** web framework. **Madvoc** is MVC framework that
-uses CoC and annotations in a pragmatic way to simplify
-web application development. It is easy to use,
-learning curve is small and it is easy to extend.
-There are no external (xml) configuration, actions
-are simple POJOs, it is compatible with any view
-technology, its pluggable and so on...
+This is a simple example for [Madvoc](http://jodd.org/madvoc) using the Servlets 3.x declarative way for registering components (and not using `web.xml`).
 
-[madvoc README](madvoc/README.md)
+Run [the web app](http://localhost:8080/madvoc2) with:
 
-### madvoc 2
-
-This is simple example of creating **Madvoc** using new declarative ways
-from Servlets 3.x and not using `web.xml`.
-
-[madvoc README](madvoc2/README.md)
+	./gradlew :madvoc2:jettyRun
 
 ### gapps
 
