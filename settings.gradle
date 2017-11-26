@@ -1,2 +1,4 @@
 include 'madvoc'
 include 'madvoc2'
+include 'madvoc-petite'
+include 'httpclient'

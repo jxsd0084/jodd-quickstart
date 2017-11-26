@@ -9,7 +9,7 @@ Read more: https://jodd.org/quickstart/
 
 ## madvoc
 
-Web application built using only [Madvoc](http://jodd.org/madvoc) web framework and default configuration settings. Actions are annotated.
+Web application built using only [Madvoc](http://jodd.org/madvoc) web framework and default configuration settings. Actions are annotated. Uses [Lagarto](http://jodd.org/lagarto) Form tag.
 
 Run [the web app](http://localhost:8080/madvoc) with:
 
@@ -17,21 +17,44 @@ Run [the web app](http://localhost:8080/madvoc) with:
 
 ## madvoc2
 
-This is a simple example for [Madvoc](http://jodd.org/madvoc) using the Servlets 3.x declarative way for registering components (and not using `web.xml`).
+This is a simple example for [Madvoc](http://jodd.org/madvoc) using Servlets 3.x declarative way for registering components (and not using `web.xml`).
 
 Run [the web app](http://localhost:8080/madvoc2) with:
 
 	./gradlew :madvoc2:jettyRun
 
-### gapps
 
-If you plan to use **Madvoc** for Google AppEngine,
-just take this quickstart example. It contains significant
-configuration change that enables running your web app
-locally.
+## madvoc-petite
 
-[gapps README](gapps/README.md)
+This example enables [Petite](http://jodd.org/petite) with [Madvoc](http://jodd.org/petite).
 
+Run [the web app](http://localhost:8080/madvoc-petite) with:
+
+	./gradlew :madvoc-petite:jettyRun
+
+
+## httpclient
+
+Example of Jodd [Http](http://jodd.org/http) client.
+
+
+	./gradlew :httpclient:run
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--
 
 ### webapp 1
 
@@ -61,7 +84,11 @@ Simple example of using *Jodd* bundles inside OSGi environment.
 
 [osgi README](osgi/README.md)
 
+### gapps
 
-### HTTP Client
+If you plan to use **Madvoc** for Google AppEngine,
+just take this quickstart example. It contains significant
+configuration change that enables running your web app
+locally.
 
-Simple example of *Jodd* http client.
+[gapps README](gapps/README.md)
