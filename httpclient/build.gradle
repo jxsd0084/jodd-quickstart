@@ -3,6 +3,9 @@ defaultTasks 'build'
 version = '1.0.0'
 
 apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName='org.jodd.quickstart.httpclient.HttpClientExample'
 
 repositories {
 	mavenLocal()
