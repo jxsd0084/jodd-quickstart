@@ -35,7 +35,7 @@ public class AppContextListener extends MadvocContextListener {
 
 		madvoc.setWebAppClass(PetiteWebApp.class);
 
-		madvoc.startNewWebApplication(servletContext);
+		madvoc.startWebApplication(servletContext);
 	}
 
 
