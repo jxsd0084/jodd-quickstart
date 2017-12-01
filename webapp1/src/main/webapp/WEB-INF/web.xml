@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
 		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-		 version="2.5">
+		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+		 version="3.0">
 
-	<!--listeners-->
-	<listener>
-		<listener-class>jodd.servlet.RequestContextListener</listener-class>
-	</listener>
-
-	<!-- decora -->
 	<filter>
 		<filter-name>decora</filter-name>
 		<filter-class>jodd.decora.DecoraServletFilter</filter-class>
@@ -18,38 +12,6 @@
 		<filter-name>decora</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-
-	<!-- madvoc -->
-	<filter>
-		<filter-name>madvoc</filter-name>
-		<filter-class>jodd.madvoc.MadvocServletFilter</filter-class>
-		<init-param>
-			<param-name>madvoc.webapp</param-name>
-			<param-value>com.quickstart.AppWebApplication</param-value>
-		</init-param>
-		<init-param>
-			<param-name>madvoc.params</param-name>
-			<param-value>/madvoc.props</param-value>
-		</init-param>
-	</filter>
-	<filter-mapping>
-		<filter-name>madvoc</filter-name>
-		<url-pattern>/*</url-pattern>
-		<dispatcher>REQUEST</dispatcher>
-		<!--<dispatcher>INCLUDE</dispatcher>-->
-		<!--<dispatcher>FORWARD</dispatcher>-->
-	</filter-mapping>
-
-	<!-- configuration -->
-
-	<jsp-config>
-		<jsp-property-group>
-			<url-pattern>*.jsp</url-pattern>
-			<page-encoding>UTF-8</page-encoding>
-			<trim-directive-whitespaces>true</trim-directive-whitespaces>
-		</jsp-property-group>
-	</jsp-config>
-
 
 	<welcome-file-list>
 		<welcome-file>redirect.jsp</welcome-file>

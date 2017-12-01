@@ -2,6 +2,9 @@ package com.quickstart;
 
 import com.quickstart.actions.IndexAction;
 import jodd.madvoc.component.MadvocConfig;
+import jodd.madvoc.component.MadvocListener;
+import jodd.madvoc.meta.MadvocComponent;
+import jodd.petite.meta.PetiteInject;
 import jodd.servlet.CsrfShield;
 import jodd.upload.impl.AdaptiveFileUploadFactory;
 
@@ -12,16 +15,18 @@ import jodd.upload.impl.AdaptiveFileUploadFactory;
  * Additionally/alternately, 'madvoc.props' is also used for
  * Madvoc configuration.
  */
-public class AppMadvocConfig extends MadvocConfig {
+@MadvocComponent
+public class AppMadvocConfig implements MadvocListener.Init {
 
-	public AppMadvocConfig() {
-		super();
+	@PetiteInject
+	MadvocConfig madvocConfig;
 
-		fileUploadFactory = new AdaptiveFileUploadFactory();
+	@Override
+	public void init() {
+		madvocConfig.setFileUploadFactory(new AdaptiveFileUploadFactory());
 
-		getRootPackages().addRootPackageOf(IndexAction.class);
+		madvocConfig.getRootPackages().addRootPackageOf(IndexAction.class);
 
-		// additional web config
 		CsrfShield.setTimeToLive(0);
 	}
 }

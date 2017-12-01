@@ -27,17 +27,8 @@ dbpool.validateConnection=true
 dbpool.validationQuery=select 1
 
 # db orm manager
-# change this if necessary
-dboom.tableNames.prefix=qs_
-dboom.tableNames.lowercase=true
-dboom.columnNames.lowercase=true
-dboom.schemaName=jodd
-
-# different column aliases types
-#dboom.defaultColumnAliasType=TABLE_NAME
-#dboom.defaultColumnAliasType=TABLE_REFERENCE
-#dboom.defaultColumnAliasType=COLUMN_CODE
-
+db.dbOomConfig.tableNames.prefix=qs_
+db.dbOomConfig.schemaName=jodd
 
 # Configure RequestScopeInjector
 # empty parameters will not be ignored (default)
