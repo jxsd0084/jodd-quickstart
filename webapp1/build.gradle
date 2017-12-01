@@ -1,24 +1,24 @@
 defaultTasks 'build'
 
-version = '1.0.0-SNAPSHOT'
+version = '1.0.0'
 
 apply plugin: 'war'
-apply plugin: 'jetty'
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
 
 repositories {
+	mavenLocal()
 	mavenCentral()
 }
 
 ext {
 	lib = [
 		jodd:           [
-							'org.jodd:jodd-lagarto-web:3.6.6',
-							'org.jodd:jodd-joy:3.6.6'
+							"org.jodd:jodd-decora:${jodd_version}",
+							"org.jodd:jodd-joy:${jodd_version}"
 						],
-		servlet:		'javax.servlet:javax.servlet-api:3.0.1',
-		jsp:			'javax.servlet.jsp:jsp-api:2.2',
-		mysql:			'mysql:mysql-connector-java:5.1.21',
-		pgsql:          'postgresql:postgresql:9.1-901.jdbc4'
+		servlet:		'javax.servlet:javax.servlet-api:4.0.0',
+		jsp:			'javax.servlet.jsp:javax.servlet.jsp-api:2.3.1',
+		mysql:			'mysql:mysql-connector-java:5.1.21'
 	]
 }
 
@@ -28,12 +28,4 @@ dependencies {
 	providedRuntime lib.servlet
 	providedRuntime lib.jsp
 	providedRuntime lib.mysql
-	providedRuntime lib.pgsql
-}
-
-
-// --- wrapper ----------------------------------------------------------------
-
-task wrapper(type: Wrapper) {
-	gradleVersion = '2.4'
 }
