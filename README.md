@@ -68,16 +68,6 @@ MySql database required for this example, see provided `docker-compose`.
 
 
 
-### webapp 2
-
-This example is similar to first one, but it does not use the database.
-The important difference is that **Madvoc** is being setup
-using _routes_ file and not automatically. **Petite** beans, however
-are still loaded by scanning the class path.
-
-[webapp2 README](webapp2/README.md)
-
-
 ### OSGi
 
 Simple example of using *Jodd* bundles inside OSGi environment.
