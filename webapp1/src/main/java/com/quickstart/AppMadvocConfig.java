@@ -12,7 +12,7 @@ import jodd.upload.impl.AdaptiveFileUploadFactory;
  * Custom application Madvoc configuration. This is also a good place
  * for any other web configuration.
  * <p>
- * Additionally/alternately, 'madvoc.props' is also used for
+ * Additionally/alternately, 'joy.props' is also used for
  * Madvoc configuration.
  */
 @MadvocComponent
