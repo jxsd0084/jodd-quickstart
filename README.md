@@ -41,8 +41,18 @@ Example of Jodd [Http](http://jodd.org/http) client.
 	./gradlew :httpclient:run
 
 
+## webapp1
 
+More advanced example of [web application](http://localhost:8080/webapp1) built with [Jodd Joy](http://jodd.org/joy).
+Application reads users from database (using [DbOom](http://jodd.org/db)) and displays
+them on the page (using [Madvoc](http://jodd.org/madvoc)), decorated by [Decora](http://jodd.org/decora). Services and actions are wired with [Petite](http://jodd.org/decora).
 
+MySql database required for this example, see provided `docker-compose`.
+
+	cd webapp1
+	docker-compose up
+	cd ..
+	./gradlew :webapp1:jettyRun
 
 
 
@@ -56,16 +66,6 @@ Example of Jodd [Http](http://jodd.org/http) client.
 
 --
 
-### webapp 1
-
-More advanced example of web application built with many **Jodd*** frameworks.
-MySql database required for this example (SQL script provided).
-Application reads users from database (using **DbOom**) and displays
-them on the page (using **Madvoc**), decorated by **Decora**.
-Services and actions are wired with **Petite**. This example also
-uses benefits of **Jodd Joy**!
-
-[webapp1 README](webapp1/README.md)
 
 
 ### webapp 2
