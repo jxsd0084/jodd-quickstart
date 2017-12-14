@@ -4,15 +4,6 @@
 		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 		 version="3.0">
 
-	<filter>
-		<filter-name>decora</filter-name>
-		<filter-class>jodd.decora.DecoraServletFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>decora</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
-
 	<welcome-file-list>
 		<welcome-file>redirect.jsp</welcome-file>
 	</welcome-file-list>

@@ -2,6 +2,7 @@ package org.jodd.quickstart.madvoc;
 
 import jodd.log.LoggerFactory;
 import jodd.log.impl.SimpleLogger;
+import jodd.madvoc.MadvocConfig;
 import jodd.madvoc.WebApp;
 
 /**
@@ -27,7 +28,7 @@ public class AppWebApplication extends WebApp {
 	}
 
 	@Override
-	protected void configureMadvoc() {
+	protected void configureMadvoc(MadvocConfig madvocConfig) {
 		// set the root package to be where the index action is
 
 		// todo you could put this method in any of lifecycle methods as well (init(), start()...).

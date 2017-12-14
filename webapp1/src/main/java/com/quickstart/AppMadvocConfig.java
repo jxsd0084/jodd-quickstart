@@ -1,8 +1,8 @@
 package com.quickstart;
 
 import com.quickstart.actions.IndexAction;
-import jodd.madvoc.component.MadvocConfig;
-import jodd.madvoc.component.MadvocListener;
+import jodd.madvoc.MadvocConfig;
+import jodd.madvoc.component.MadvocComponentLifecycle;
 import jodd.madvoc.meta.MadvocComponent;
 import jodd.petite.meta.PetiteInject;
 import jodd.servlet.CsrfShield;
@@ -16,7 +16,7 @@ import jodd.upload.impl.AdaptiveFileUploadFactory;
  * Madvoc configuration.
  */
 @MadvocComponent
-public class AppMadvocConfig implements MadvocListener.Init {
+public class AppMadvocConfig implements MadvocComponentLifecycle.Init {
 
 	@PetiteInject
 	MadvocConfig madvocConfig;

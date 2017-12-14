@@ -1,12 +1,12 @@
 package org.jodd.quickstart.madvocpetite;
 
-import jodd.madvoc.component.MadvocConfig;
-import jodd.madvoc.component.MadvocListener;
+import jodd.madvoc.MadvocConfig;
+import jodd.madvoc.component.MadvocComponentLifecycle;
 import jodd.madvoc.meta.MadvocComponent;
 import jodd.petite.meta.PetiteInject;
 
 @MadvocComponent
-public class MyMadvocComponent implements MadvocListener.Init {
+public class MyMadvocComponent implements MadvocComponentLifecycle.Init {
 
 	@PetiteInject
 	MadvocConfig madvocConfig;
