@@ -13,7 +13,6 @@ repositories {
 ext {
 	lib = [
 		jodd:           [
-							"org.jodd:jodd-decora:${jodd_version}",
 							"org.jodd:jodd-joy:${jodd_version}"
 						],
 		servlet:		'javax.servlet:javax.servlet-api:4.0.0',
@@ -25,7 +24,9 @@ ext {
 dependencies {
 	compile lib.jodd
 
+	runtime lib.mysql
+
 	providedRuntime lib.servlet
 	providedRuntime lib.jsp
-	providedRuntime lib.mysql
+
 }
