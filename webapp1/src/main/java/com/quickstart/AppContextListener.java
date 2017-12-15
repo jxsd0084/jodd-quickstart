@@ -10,8 +10,7 @@ public class AppContextListener extends JoyContextListener {
 
 	@Override
 	protected void configureServletContext(ServletContext servletContext) {
-		decoraEnabled = true;
-
+		super.enableDecora();
 		super.configureServletContext(servletContext);
 	}
 }

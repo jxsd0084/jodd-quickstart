@@ -13,7 +13,9 @@ Web application built using only [Madvoc](http://jodd.org/madvoc) web framework 
 
 Run [the web app](http://localhost:8080/madvoc) with:
 
-	./gradlew :madvoc:jettyRun
+	./gradlew :madvoc:tomcatRun
+	open http://localhost:8080/madvoc
+
 
 ## madvoc2
 
@@ -21,7 +23,8 @@ This is a simple example for [Madvoc](http://jodd.org/madvoc) using Servlets 3.x
 
 Run [the web app](http://localhost:8080/madvoc2) with:
 
-	./gradlew :madvoc2:jettyRun
+	./gradlew :madvoc2:tomcatRun
+	open http://localhost:8080/madvoc2
 
 
 ## madvoc-petite
@@ -30,13 +33,13 @@ This example enables [Petite](http://jodd.org/petite) with [Madvoc](http://jodd.
 
 Run [the web app](http://localhost:8080/madvoc-petite) with:
 
-	./gradlew :madvoc-petite:jettyRun
+	./gradlew :madvoc-petite:tomcatRun
+	open http://localhost:8080/madvoc-petite
 
 
 ## httpclient
 
 Example of Jodd [Http](http://jodd.org/http) client.
-
 
 	./gradlew :httpclient:run
 
@@ -50,23 +53,14 @@ them on the page (using [Madvoc](http://jodd.org/madvoc)), decorated by [Decora]
 MySql database required for this example, see provided `docker-compose`.
 
 	cd webapp1
-	docker-compose up
+	docker-compose up -d
 	cd ..
-	./gradlew :webapp1:jettyRun
+	./gradlew :webapp1:tomcatRun
+	open http://localhost:8080/webapp1
 
+---
 
-
-
-
-
-
-
-
-
-
---
-
-
+## OLD Examples (no support)
 
 ### OSGi
 

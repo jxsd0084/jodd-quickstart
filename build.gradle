@@ -1,7 +1,7 @@
 
 allprojects {
     ext {
-		jodd_version = '4.0-20171201'
+		jodd_version = '4.0'
 	}
 }
 

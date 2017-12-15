@@ -1,6 +1,5 @@
 package com.quickstart;
 
-import com.quickstart.actions.IndexAction;
 import jodd.madvoc.MadvocConfig;
 import jodd.madvoc.component.MadvocComponentLifecycle;
 import jodd.madvoc.meta.MadvocComponent;
@@ -25,7 +24,7 @@ public class AppMadvocConfig implements MadvocComponentLifecycle.Init {
 	public void init() {
 		madvocConfig.setFileUploadFactory(new AdaptiveFileUploadFactory());
 
-		madvocConfig.getRootPackages().addRootPackageOf(IndexAction.class);
+		//madvocConfig.getRootPackages().addRootPackageOf(IndexAction.class);
 
 		CsrfShield.setTimeToLive(0);
 	}
